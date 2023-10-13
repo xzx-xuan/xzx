@@ -14,7 +14,6 @@ public class UnionServiceImpl implements UnionService {
     private UnionMapper unionMapper;
     @Override
     public List<Union> select() {
-
         return unionMapper.select();
     }
 }

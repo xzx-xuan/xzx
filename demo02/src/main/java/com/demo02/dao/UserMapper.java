@@ -10,14 +10,14 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    @Select("select * from actor")
-    List<Actor> selectAll();
+    @Select("select * from film_text")
+    List<Film> selectAll();
 
     @Insert("insert into film_text (film_id,title,description) values (#{filmId},#{title},#{description})")
     void add(Film film);
 
     @Delete("delete from film_text where film_id=#{filmId}")
     void delete(Integer id);
-@Update("update actor set first_name=#{firstName},last_name=#{lastName},last_update=#{lastUpdate} where actor_id=#{actorId}")
-    void update(Actor actor);
+@Update("update film_text set film_id=#{filmId},title=#{title},description=#{description} where film_id=#{filmId}")
+    void update(Film film);
 }

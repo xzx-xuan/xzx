@@ -8,11 +8,12 @@ import java.sql.ResultSet;
 import java.util.List;
 
 public interface UserService {
-    List<Actor> selectAll();
+    List<Film> selectAll();
 
     String add(Film film);
 
     String delete(Integer id);
 
-    String update(Actor actor);
+
+    String update(Film film);
 }

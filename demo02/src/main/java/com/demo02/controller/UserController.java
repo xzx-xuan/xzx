@@ -16,7 +16,7 @@ public class UserController {
     @Autowired
     private UserService userService;
     @GetMapping("/selectAll")
-public List<Actor> selectAll(){
+public List<Film> selectAll(){
     return userService.selectAll();
 }
 
@@ -29,7 +29,7 @@ public List<Actor> selectAll(){
         return userService.delete(id);
     }
     @PutMapping("/update")
-    public String update(@RequestBody Actor actor){
-        return userService.update(actor);
+    public String update(@RequestBody Film film){
+        return userService.update(film);
     }
 }
